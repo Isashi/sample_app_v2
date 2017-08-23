@@ -10,7 +10,7 @@ class User < ApplicationRecord
 	has_secure_password
 	VALID_PASSWORD_REGEX = /(?=\w*[a-z])(?=\w*[0-9])\w+/
 	validates :password, presence: true, length: {minimum: 6},
-											 format: {with: VALID_PASSWORD_REGEX}
+											 format: {with: VALID_PASSWORD_REGEX}, allow_nil: true
 											 
 
   # Returns the hash digest of the given string.

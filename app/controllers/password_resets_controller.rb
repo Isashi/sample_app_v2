@@ -1,5 +1,3 @@
-
-
 class PasswordResetsController < ApplicationController
   before_action :get_user,         only: [:edit, :update]
   before_action :valid_user,       only: [:edit, :update]
@@ -30,17 +28,11 @@ class PasswordResetsController < ApplicationController
       render 'edit'
     elsif @user.update_attributes(user_params)          # Case (4)
       log_in @user
-      @user.update_attribute(:reset_digest, nil)
       flash[:success] = "Password has been reset."
       redirect_to @user
     else
       render 'edit'                                     # Case (2)
     end
-  end
-
-  # Returns true if a password reset has expired.
-  def password_reset_expired?
-    reset_sent_at < 2.hours.ago
   end
 
   private
@@ -71,4 +63,3 @@ class PasswordResetsController < ApplicationController
       end
     end
 end
-

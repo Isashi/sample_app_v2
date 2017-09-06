@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/stympy/faker.git
+  revision: dfb0762fffe7cd5ba80a6de726e063b2bf6e6240
+  branch: master
+  specs:
+    faker (1.8.4)
+      i18n (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,8 +76,6 @@ GEM
     erubi (1.6.1)
     excon (0.57.1)
     execjs (2.7.0)
-    faker (1.7.3)
-      i18n (~> 0.5)
     ffi (1.9.18)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -368,7 +374,7 @@ DEPENDENCIES
   byebug (= 9.0.6)
   carrierwave (= 1.1.0)
   coffee-rails (= 4.2.2)
-  faker (= 1.7.3)
+  faker!
   fog (= 1.40.0)
   guard (= 2.14.1)
   guard-minitest (= 2.4.6)
